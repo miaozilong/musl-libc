@@ -5,11 +5,10 @@ jobs:
   build:
     runs-on: ubuntu-22.04
     steps:
-      - run: git clone https://git.musl-libc.org/git/musl
-      - run: |
-          pwd
+      - name: 安装musl-libc
+        run: |
+          git clone https://git.musl-libc.org/git/musl
           cd musl
-          pwd
           ls
           ./configure
           make
