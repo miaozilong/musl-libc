@@ -1,1 +1,17 @@
-
+name: 安装musl-libc
+run-name: 安装musl-libc
+on: [ push ]
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - run: git clone https://git.musl-libc.org/cgit/musl
+      - run: git checkout v1.2.3
+      - run: |
+          pwd
+          cd musl
+          pwd
+          ls
+          ./configure
+          make
+          make install
