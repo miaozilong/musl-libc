@@ -6,7 +6,6 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - run: git clone https://git.musl-libc.org/git/musl
-      - run: git checkout v1.2.3
       - run: |
           pwd
           cd musl
