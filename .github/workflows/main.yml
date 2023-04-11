@@ -13,4 +13,4 @@ jobs:
           ls
           ./configure
           make
-          make install
+          sudo make install
